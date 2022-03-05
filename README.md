@@ -1,16 +1,29 @@
-# netflix_clone_responsive_ui
+# Netflix Clone Responsive Ui
 
-A new Flutter project.
 
-## Getting Started
+## Mobile 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+![2](https://user-images.githubusercontent.com/64389727/156881823-237e2da0-81b7-4e1c-b791-ec5a91fb1a35.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![1](https://user-images.githubusercontent.com/64389727/156881825-dfa86f1d-589c-49af-ba11-8d4e743871fd.png)
+
+
+https://user-images.githubusercontent.com/64389727/156882100-aeca0abb-078a-4438-b4c8-ef18aa2233be.mp4
+
+
+
+
+## Web 
+
+![3](https://user-images.githubusercontent.com/64389727/156881840-cc18d2c1-2a0a-434e-b540-2c0b02596a27.png)
+
+
+
+
+
+https://user-images.githubusercontent.com/64389727/156882203-eebbe020-4a9c-49a6-8bea-f7786e2bd629.mp4
+
+
+
