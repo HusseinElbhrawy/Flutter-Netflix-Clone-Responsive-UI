@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: const Icon(Icons.cast),
       ),
       body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
         controller: scrollController,
         slivers: [
           const SliverToBoxAdapter(
@@ -61,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.all(8),
             sliver: SliverToBoxAdapter(
               child: Previews(
+                key: const PageStorageKey('previews'),
                 title: 'Previews',
                 contentList: previews,
               ),
@@ -70,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(bottom: 20.0),
             sliver: SliverToBoxAdapter(
               child: ContentList(
+                key: const PageStorageKey('myList'),
                 title: 'My List',
                 contentList: myList,
               ),
@@ -79,6 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(bottom: 20.0),
             sliver: SliverToBoxAdapter(
               child: ContentList(
+                  key: const PageStorageKey('originals'),
                   title: 'Netflix Originals',
                   contentList: originals,
                   isOriginals: true),
@@ -88,6 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: const EdgeInsets.only(bottom: 20.0),
             sliver: SliverToBoxAdapter(
               child: ContentList(
+                key: const PageStorageKey('trending'),
                 title: 'Trending',
                 contentList: trending,
               ),
@@ -126,6 +131,7 @@ class ContentList extends StatelessWidget {
         SizedBox(
           height: isOriginals ? 500 : 220,
           child: ListView.builder(
+            physics: const BouncingScrollPhysics(),
             itemCount: contentList.length,
             scrollDirection: Axis.horizontal,
             padding:
