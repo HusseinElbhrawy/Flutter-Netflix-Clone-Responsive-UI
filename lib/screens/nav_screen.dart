@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone_responsive_ui/screens/home_screen.dart';
+import 'package:netflix_clone_responsive_ui/widgets/responsive_widget.dart';
 
 class NavScreen extends StatefulWidget {
   const NavScreen({Key? key}) : super(key: key);
@@ -30,32 +31,34 @@ class _NavScreenState extends State<NavScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.white,
-        currentIndex: currentIndex,
-        unselectedItemColor: Colors.grey,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.black,
-        onTap: (index) => setState(() {
-          currentIndex = index;
-        }),
-        selectedFontSize: 11.0,
-        unselectedFontSize: 11.0,
-        items: _icons
-            .map(
-              (title, icon) {
-                return MapEntry(
-                  title,
-                  BottomNavigationBarItem(
-                    icon: Icon(icon),
-                    label: title,
-                  ),
-                );
-              },
-            )
-            .values
-            .toList(),
-      ),
+      bottomNavigationBar: ResponsiveWidget.isDesktop(context)
+          ? null
+          : BottomNavigationBar(
+              selectedItemColor: Colors.white,
+              currentIndex: currentIndex,
+              unselectedItemColor: Colors.grey,
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: Colors.black,
+              onTap: (index) => setState(() {
+                currentIndex = index;
+              }),
+              selectedFontSize: 11.0,
+              unselectedFontSize: 11.0,
+              items: _icons
+                  .map(
+                    (title, icon) {
+                      return MapEntry(
+                        title,
+                        BottomNavigationBarItem(
+                          icon: Icon(icon),
+                          label: title,
+                        ),
+                      );
+                    },
+                  )
+                  .values
+                  .toList(),
+            ),
     );
   }
 }
